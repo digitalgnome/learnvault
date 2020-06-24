@@ -1,165 +1,172 @@
-[{
-  "_id": {
-    "$oid": "5ee53832573c6f01f2945b58"
+[
+  {
+    "_id": {
+      "$oid": "5ee53832573c6f01f2945b58"
+    },
+    "hidden": true,
+    "contributors": [
+      "test1",
+      "test2"
+    ],
+    "links": [
+      "link1",
+      "link2"
+    ],
+    "likes": [],
+    "tags": [
+      "test1",
+      "test2"
+    ],
+    "author": "private test 2",
+    "title": "test",
+    "description": "test",
+    "category": "test",
+    "text": "test",
+    "updated": {
+      "$date": "2020-06-13T20:33:54.377Z"
+    },
+    "__v": 0
   },
-  "hidden": true,
-  "contributors": [
-    "test1",
-    "test2"
-  ],
-  "links": [
-    "link1",
-    "link2"
-  ],
-  "likes": [],
-  "tags": [
-    "test1",
-    "test2"
-  ],
-  "author": "private test 2",
-  "title": "test",
-  "description": "test",
-  "category": "test",
-  "text": "test",
-  "updated": {
-    "$date": "2020-06-13T20:33:54.377Z"
+  {
+    "_id": {
+      "$oid": "5eee5274c164b7a1e6edf7bd"
+    },
+    "contributors": [],
+    "links": [
+      "https://www.freecodecamp.org/news/best-javascript-tutorial/"
+    ],
+    "likes": [],
+    "tags": [
+      "javascript",
+      "books"
+    ],
+    "author": "dulio",
+    "title": "Best Javascript Books",
+    "description": "Best books on javascript",
+    "hidden": false,
+    "category": "javascript",
+    "text": "The Books. JavaScript for Kids: A Playful Introduction to Programming by Nick Morgan True to the title, this book is a whimsical exploration of very basic programming concepts, but don’t let that fool you. Books for kids aren’t just for kids. If you have never touched code before, this is a good place to start, even if you’re all grown up. Diving in the deep end before you learn how to swim can be a frustrating experience. It’s better to start your practice with some easy wins. Composing Software by Eric Elliott (disclaimer: That’s me) is an exploration of functional programming and object composition in JavaScript. All software design is composition: the act of breaking complex problems down into smaller problems and composing those solutions. Most developers have a limited understanding of compositional techniques. It’s time for that to change.<h1>Eloquent JavaScript: A Modern Introduction to Programming by Marijn Haverbeke</h1><p>This book is a work of art. It walks you through the essential concepts with a clear roadmap using clear language. It’s masterfully composed and edited, and unlike most programming books, it’s full of exercises for you to practice. If I were teaching the basics of programming in high school or college, I would use this as a text book.</p><h1>JavaScript: The Good Parts by Douglas Crockford</h1><p>It may seem absurd now, but when this book was written, JavaScript was still a young language which started life as a tiny scripting language in browsers. At the time, browsers were just beginning to be explored by serious application developers.</p><h1>Programming JavaScript Applications: Robust Web Architecture with Node, HTML5, and Moderns JS Libraries by Eric Elliott (that’s me)</h1><p>When I started hiring JavaScript developers to build applications, it really struck me how few of them understood how to harness JavaScript to build robust application architecture. With that in mind, I decided to write a book that would cover some JavaScript best practices, introduce people to prototypes, object composition, and at least the basic concepts of functional programming (enough to understand how to build and maintain a typical JavaScript application), and then apply those concepts to building some of the common concerns that spring up in the majority of applications, regardless of the application business domain.</p><h1>Effective JavaScript: 68 Specific Ways to Harness the Power of JavaScript by David Herman</h1><p>After you’ve had some basic exposure to JavaScript, Effective JavaScript will take you on a guided tour of the language in more depth, showing by example lessons taught by a master programmer seasoned in his craft.Right away you’ll be introduced to some of the quirks of JavaScript, from floating point number precision (because JavaScript only has one number type, and it’s a floating point type), to the oddities of type coercions and semicolon insertion. The rest of the book continues in the same style, exploring best practices for working with functions, objects, arrays, library and API design, and concurrency. Regardless of your skill level, I promise you will learn something new.</p>",
+    "updated": {
+      "$date": "2020-06-20T18:16:20.715Z"
+    },
+    "__v": 0
   },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "5eee5274c164b7a1e6edf7bd"
+  {
+    "_id": {
+      "$oid": "5eee5bac1e986de551d57488"
+    },
+    "contributors": [],
+    "links": [
+      "https://www.freecodecamp.org/news/best-javascript-tutorial/",
+      "http://jsforcats.com/",
+      "https://javascript.info/",
+      "https://eloquentjavascript.net/",
+      "https://www.youtube.com/watch?v=Bv_5Zv5c-Ts",
+      "http://youmightnotneedjquery.com/"
+    ],
+    "likes": [],
+    "tags": [
+      "javascript",
+      "books"
+    ],
+    "author": "Nadya",
+    "title": "Top Javascript Resources",
+    "description": "Top javascript resources",
+    "hidden": false,
+    "category": "javascript",
+    "text": "https://www.freecodecamp.org/news/best-javascript-tutorial/, http://jsforcats.com/, https://javascript.info/, https://eloquentjavascript.net/, https://www.youtube.com/watch?v=Bv_5Zv5c-Ts, http://youmightnotneedjquery.com/",
+    "updated": {
+      "$date": "2020-06-20T18:55:40.020Z"
+    },
+    "__v": 0
   },
-  "contributors": [],
-  "links": [
-    "https://www.freecodecamp.org/news/best-javascript-tutorial/"
-  ],
-  "likes": [],
-  "tags": [
-    "javascript",
-    "books"
-  ],
-  "author": "dulio",
-  "title": "Best Javascript Books",
-  "description": "Best books on javascript",
-  "hidden": false,
-  "category": "javascript",
-  "text": "The Books. JavaScript for Kids: A Playful Introduction to Programming by Nick Morgan True to the title, this book is a whimsical exploration of very basic programming concepts, but don’t let that fool you. Books for kids aren’t just for kids. If you have never touched code before, this is a good place to start, even if you’re all grown up. Diving in the deep end before you learn how to swim can be a frustrating experience. It’s better to start your practice with some easy wins. Composing Software by Eric Elliott (disclaimer: That’s me) is an exploration of functional programming and object composition in JavaScript. All software design is composition: the act of breaking complex problems down into smaller problems and composing those solutions. Most developers have a limited understanding of compositional techniques. It’s time for that to change.<h1>Eloquent JavaScript: A Modern Introduction to Programming by Marijn Haverbeke</h1><p>This book is a work of art. It walks you through the essential concepts with a clear roadmap using clear language. It’s masterfully composed and edited, and unlike most programming books, it’s full of exercises for you to practice. If I were teaching the basics of programming in high school or college, I would use this as a text book.</p><h1>JavaScript: The Good Parts by Douglas Crockford</h1><p>It may seem absurd now, but when this book was written, JavaScript was still a young language which started life as a tiny scripting language in browsers. At the time, browsers were just beginning to be explored by serious application developers.</p><h1>Programming JavaScript Applications: Robust Web Architecture with Node, HTML5, and Moderns JS Libraries by Eric Elliott (that’s me)</h1><p>When I started hiring JavaScript developers to build applications, it really struck me how few of them understood how to harness JavaScript to build robust application architecture. With that in mind, I decided to write a book that would cover some JavaScript best practices, introduce people to prototypes, object composition, and at least the basic concepts of functional programming (enough to understand how to build and maintain a typical JavaScript application), and then apply those concepts to building some of the common concerns that spring up in the majority of applications, regardless of the application business domain.</p><h1>Effective JavaScript: 68 Specific Ways to Harness the Power of JavaScript by David Herman</h1><p>After you’ve had some basic exposure to JavaScript, Effective JavaScript will take you on a guided tour of the language in more depth, showing by example lessons taught by a master programmer seasoned in his craft.Right away you’ll be introduced to some of the quirks of JavaScript, from floating point number precision (because JavaScript only has one number type, and it’s a floating point type), to the oddities of type coercions and semicolon insertion. The rest of the book continues in the same style, exploring best practices for working with functions, objects, arrays, library and API design, and concurrency. Regardless of your skill level, I promise you will learn something new.</p>",
-  "updated": {
-    "$date": "2020-06-20T18:16:20.715Z"
+  {
+    "_id": {
+      "$oid": "5eee6dd9c3431e50d549d80b"
+    },
+    "contributors": [],
+    "links": [
+      "https://www.youtube.com/watch?v=PkZNo7MFNFg",
+      "https://www.youtube.com/watch?v=PkZNo7MFNFg",
+      "https://www.youtube.com/watch?v=PkZNo7MFNFg",
+      "https://www.youtube.com/watch?v=PkZNo7MFNFg",
+      "https://www.youtube.com/watch?v=Bv_5Zv5c-Ts",
+      "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+    ],
+    "likes": [],
+    "tags": [
+      "javascript",
+      "books"
+    ],
+    "author": "Dulio",
+    "title": "Top Javascript Videos",
+    "description": "Top javascript Videos",
+    "hidden": false,
+    "category": "javascript",
+    "text": "https://www.youtube.com/watch?v=PkZNo7MFNFg, https://www.youtube.com/watch?v=PkZNo7MFNFg, https://www.youtube.com/watch?v=PkZNo7MFNFg, https://www.youtube.com/watch?v=PkZNo7MFNFg, https://www.youtube.com/watch?v=Bv_5Zv5c-Ts, https://www.youtube.com/watch?v=PkZNo7MFNFg",
+    "updated": {
+      "$date": "2020-06-20T20:13:13.601Z"
+    },
+    "__v": 0
   },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "5eee5bac1e986de551d57488"
+  {
+    "_id": {
+      "$oid": "5eee6e8dc3431e50d549d80c"
+    },
+    "contributors": [],
+    "links": [
+      "https://reactcommunity.org/react-transition-group/",
+      "http://reactcommunity.org/react-transition-group/css-transition",
+      "https://reactjs.org/docs/animation.html",
+      "https://popmotion.io/pose/",
+      "https://www.youtube.com/watch?v=Bv_5Zv5c-Ts",
+      "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+    ],
+    "likes": [
+      "5eee558087a25cca1fefbf1d"
+    ],
+    "tags": [
+      "javascript",
+      "books"
+    ],
+    "author": "Mariusz",
+    "title": "Top React Transition Resources",
+    "description": "Learn React animation and transition effects",
+    "hidden": false,
+    "category": "javascript",
+    "text": "https://reactcommunity.org/react-transition-group/, http://reactcommunity.org/react-transition-group/css-transition,https://reactjs.org/docs/animation.html, https://popmotion.io/pose/, https://www.youtube.com/watch?v=Bv_5Zv5c-Ts, https://www.youtube.com/watch?v=PkZNo7MFNFg",
+    "updated": {
+      "$date": "2020-06-20T20:16:13.044Z"
+    },
+    "__v": 1
   },
-  "contributors": [],
-  "links": [
-    "https://www.freecodecamp.org/news/best-javascript-tutorial/",
-    "http://jsforcats.com/",
-    "https://javascript.info/",
-    "https://eloquentjavascript.net/",
-    "https://www.youtube.com/watch?v=Bv_5Zv5c-Ts",
-    "http://youmightnotneedjquery.com/"
-  ],
-  "likes": [],
-  "tags": [
-    "javascript",
-    "books"
-  ],
-  "author": "Nadya",
-  "title": "Top Javascript Resources",
-  "description": "Top javascript resources",
-  "hidden": false,
-  "category": "javascript",
-  "text": "https://www.freecodecamp.org/news/best-javascript-tutorial/, http://jsforcats.com/, https://javascript.info/, https://eloquentjavascript.net/, https://www.youtube.com/watch?v=Bv_5Zv5c-Ts, http://youmightnotneedjquery.com/",
-  "updated": {
-    "$date": "2020-06-20T18:55:40.020Z"
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "5eee6dd9c3431e50d549d80b"
-  },
-  "contributors": [],
-  "links": [
-    "https://www.youtube.com/watch?v=PkZNo7MFNFg",
-    "https://www.youtube.com/watch?v=PkZNo7MFNFg",
-    "https://www.youtube.com/watch?v=PkZNo7MFNFg",
-    "https://www.youtube.com/watch?v=PkZNo7MFNFg",
-    "https://www.youtube.com/watch?v=Bv_5Zv5c-Ts",
-    "https://www.youtube.com/watch?v=PkZNo7MFNFg"
-  ],
-  "likes": [],
-  "tags": [
-    "javascript",
-    "books"
-  ],
-  "author": "Dulio",
-  "title": "Top Javascript Videos",
-  "description": "Top javascript Videos",
-  "hidden": false,
-  "category": "javascript",
-  "text": "https://www.youtube.com/watch?v=PkZNo7MFNFg, https://www.youtube.com/watch?v=PkZNo7MFNFg, https://www.youtube.com/watch?v=PkZNo7MFNFg, https://www.youtube.com/watch?v=PkZNo7MFNFg, https://www.youtube.com/watch?v=Bv_5Zv5c-Ts, https://www.youtube.com/watch?v=PkZNo7MFNFg",
-  "updated": {
-    "$date": "2020-06-20T20:13:13.601Z"
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "5eee6e8dc3431e50d549d80c"
-  },
-  "contributors": [],
-  "links": [
-    "https://reactcommunity.org/react-transition-group/",
-    "http://reactcommunity.org/react-transition-group/css-transition",
-    "https://reactjs.org/docs/animation.html",
-    "https://popmotion.io/pose/",
-    "https://www.youtube.com/watch?v=Bv_5Zv5c-Ts",
-    "https://www.youtube.com/watch?v=PkZNo7MFNFg"
-  ],
-  "likes": [
-    "5eee558087a25cca1fefbf1d"
-  ],
-  "tags": [
-    "javascript",
-    "books"
-  ],
-  "author": "Mariusz",
-  "title": "Top React Transition Resources",
-  "description": "Learn React animation and transition effects",
-  "hidden": false,
-  "category": "javascript",
-  "text": "https://reactcommunity.org/react-transition-group/, http://reactcommunity.org/react-transition-group/css-transition,https://reactjs.org/docs/animation.html, https://popmotion.io/pose/, https://www.youtube.com/watch?v=Bv_5Zv5c-Ts, https://www.youtube.com/watch?v=PkZNo7MFNFg",
-  "updated": {
-    "$date": "2020-06-20T20:16:13.044Z"
-  },
-  "__v": 1
-},{
-  "_id": {
-    "$oid": "5eee6f98c3431e50d549d80d"
-  },
-  "contributors": [],
-  "links": [
-    "https://redux.js.org/introduction/getting-started",
-    "https://redux.js.org/introduction/learning-resources",
-    "https://www.valentinog.com/blog/redux/",
-    "https://learnredux.com/",
-    "https://www.youtube.com/watch?v=CVpUuw9XSjY",
-    "https://www.youtube.com/watch?v=poQXNp9ItL4"
-  ],
-  "likes": [],
-  "tags": [
-    "javascript",
-    "books"
-  ],
-  "author": "Rob",
-  "title": "Top 10 resources for learning Redux",
-  "description": "Redux is hard, understand how to use Redux with these resources",
-  "hidden": false,
-  "category": "javascript",
-  "text": "https://redux.js.org/introduction/getting-started, https://redux.js.org/introduction/learning-resources, https://www.valentinog.com/blog/redux/, https://learnredux.com/, https://www.youtube.com/watch?v=CVpUuw9XSjY, https://www.youtube.com/watch?v=poQXNp9ItL4",
-  "updated": {
-    "$date": "2020-06-20T20:20:40.560Z"
-  },
-  "__v": 0
-}]
+  {
+    "_id": {
+      "$oid": "5eee6f98c3431e50d549d80d"
+    },
+    "contributors": [],
+    "links": [
+      "https://redux.js.org/introduction/getting-started",
+      "https://redux.js.org/introduction/learning-resources",
+      "https://www.valentinog.com/blog/redux/",
+      "https://learnredux.com/",
+      "https://www.youtube.com/watch?v=CVpUuw9XSjY",
+      "https://www.youtube.com/watch?v=poQXNp9ItL4"
+    ],
+    "likes": [],
+    "tags": [
+      "javascript",
+      "books"
+    ],
+    "author": "Rob",
+    "title": "Top 10 resources for learning Redux",
+    "description": "Redux is hard, understand how to use Redux with these resources",
+    "hidden": false,
+    "category": "javascript",
+    "text": "https://redux.js.org/introduction/getting-started, https://redux.js.org/introduction/learning-resources, https://www.valentinog.com/blog/redux/, https://learnredux.com/, https://www.youtube.com/watch?v=CVpUuw9XSjY, https://www.youtube.com/watch?v=poQXNp9ItL4",
+    "updated": {
+      "$date": "2020-06-20T20:20:40.560Z"
+    },
+    "__v": 0
+  }
+]

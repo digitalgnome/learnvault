@@ -1,39 +1,55 @@
-[{
-  "_id": {
-    "$oid": "5ee987670ca9dc164756f5bd"
+[
+  {
+    "_id": {
+      "$oid": "5ee987670ca9dc164756f5bd"
+    },
+    "email": "wayrse@gmail.com",
+    "username": "wayrse",
+    "password": "$2b$10$b3mO5pUgr481JjqTNGTpM.mGkd9LcJI80ihQCMDLgrVy3Hxge3APO",
+    "__v": 5,
+    "savedcollections": [
+      "5eec0a09ac5e17ca94ff1d6a",
+      "5ee5446195965d3bc84e8078",
+      "5eec095cac5e17ca94ff1d69",
+      "5ee5427e16147135304699cd",
+      "5ee537f9573c6f01f2945b55"
+    ]
   },
-  "email": "wayrse@gmail.com",
-  "username": "wayrse",
-  "password": "$2b$10$b3mO5pUgr481JjqTNGTpM.mGkd9LcJI80ihQCMDLgrVy3Hxge3APO",
-  "__v": 5,
-  "savedcollections": [
-    "5eec0a09ac5e17ca94ff1d6a",
-    "5ee5446195965d3bc84e8078",
-    "5eec095cac5e17ca94ff1d69",
-    "5ee5427e16147135304699cd",
-    "5ee537f9573c6f01f2945b55"
-  ]
-},{
-  "_id": {
-    "$oid": "5eee4c7af60b2523041a0e1a"
+  {
+    "_id": {
+      "$oid": "5eee4c7af60b2523041a0e1a"
+    },
+    "savedcollections": [
+      "5ee5427e16147135304699cd",
+      "5ee53832573c6f01f2945b58"
+    ],
+    "email": "me@me.bg",
+    "username": "mee",
+    "password": "$2b$10$xZ0skqFe/oKbRYEPhuRkfOXWIzPAnEe69G0t5L7uAJQHwpOrTmeUW",
+    "__v": 2
   },
-  "savedcollections": [
-    "5ee5427e16147135304699cd",
-    "5ee53832573c6f01f2945b58"
-  ],
-  "email": "me@me.bg",
-  "username": "mee",
-  "password": "$2b$10$xZ0skqFe/oKbRYEPhuRkfOXWIzPAnEe69G0t5L7uAJQHwpOrTmeUW",
-  "__v": 2
-},{
-  "_id": {
-    "$oid": "5eee558087a25cca1fefbf1d"
+  {
+    "_id": {
+      "$oid": "5eee558087a25cca1fefbf1d"
+    },
+    "savedcollections": [
+      "5eee5274c164b7a1e6edf7bd"
+    ],
+    "email": "123@123.com",
+    "username": "rob",
+    "password": "$2b$10$oWt7zx0bfIMBMJl7pv8Bfu29mWsRBgRj3xMGq/C2Lbn8DTK6J1/9e",
+    "__v": 1
   },
-  "savedcollections": [
-    "5eee5274c164b7a1e6edf7bd"
-  ],
-  "email": "123@123.com",
-  "username": "rob",
-  "password": "$2b$10$oWt7zx0bfIMBMJl7pv8Bfu29mWsRBgRj3xMGq/C2Lbn8DTK6J1/9e",
-  "__v": 1
-}]
+  {
+    "_id": {
+      "$oid": "5ef2e1c567da7456d7ab7e8d"
+    },
+    "savedcollections": [
+      "5eee5274c164b7a1e6edf7bd"
+    ],
+    "email": "cbrown@email.com",
+    "username": "cbrown",
+    "password": "$2b$10$3Eus.lBSC/I2uHZlhrwX/epZST7W77AohBIPshIwKnsnjCBthxiJ2",
+    "__v": 0
+  }
+]
