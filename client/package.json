@@ -2,7 +2,7 @@
   "name": "client",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.jsx",
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run react\"",
     "server": "cd ../server && npm run server",
