@@ -10,19 +10,16 @@ const session = require('express-session');
 const passport = require('passport');
 const GitHubStategy = require('passport-github2').Strategy;
 
-let GITHUB_CLIENT_ID = '731d63091a4e63d6d4c0';
-let GITHUB_CLIENT_SECRET = '8b1e7a76b1ab23a9054267cde19de15ec7182d02';
-
+const { GITHUB_CLIENT_ID } = process.env;
+const { GITHUB_CLIENT_SECRET } = process.env;
 
 const userController = require('./controllers/user');
 const verifyToken = require('./utils/verifyToken');
 
-
-const keys = require('./keys/keys');
+// const keys = require('./keys/keys');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-
 
 // ------
 // Routes
@@ -32,13 +29,13 @@ app.use(express.static(path.join(__dirname, '..', 'client', 'dist')));
 app.use(express.json({ extended: false }));
 app.use(cookieParser());
 
-//Passport setup
+// Passport setup
 
-passport.serializeUser(function (user, done) {
+passport.serializeUser((user, done) => {
   done(null, user);
 });
 
-passport.deserializeUser(function (obj, done) {
+passport.deserializeUser((obj, done) => {
   done(null, obj);
 });
 
@@ -49,30 +46,29 @@ passport.use(
       clientSecret: GITHUB_CLIENT_SECRET,
       callbackURL: 'http://localhost:5000/auth/github/callback',
     },
-    function (accessToken, refreshToken, profile, done) {
+    ((accessToken, refreshToken, profile, done) => {
       //
-      console.log("githubStrategy",profile );
+      console.log('githubStrategy', profile);
       /*
       User.remove({ githubId: profile.id }, function (err, user) {
         console.log('try to remove',err,user);
       });
-      */  
-    }
-  )
+      */
+    }),
+  ),
 );
 
 app.use(session({ secret: 'keyboard cat', resave: false, saveUninitialized: false }));
 app.use(passport.initialize());
 app.use(passport.session());
 
-
 app.get(
   '/auth/github',
   passport.authenticate('github', { scope: ['user:email'] }),
-  function (req, res) {
+  (req, res) => {
     // The request will be redirected to GitHub for authentication, so this
     // function will not be called.
-  }
+  },
 );
 
 // GET /auth/github/callback
@@ -83,13 +79,16 @@ app.get(
 app.get(
   '/auth/github/callback',
   passport.authenticate('github', { failureRedirect: '/login' }),
-  function (req, res) {
+  (req, res) => {
     console.log('TESTING CALLBACK ROUTE');
     res.redirect('/api/collections');
-  }
+  },
 );
 
-
+app.get('/logout', (req, res) => {
+  req.logout();
+  res.redirect('/');
+});
 
 app.post('/api/register', userController.registerUser);
 app.post('/api/login', userController.loginUser);
