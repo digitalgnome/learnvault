@@ -62,6 +62,10 @@ const Login = ({ setLoggedInUser }) => {
         <button type="submit" onClick={login}>
           Login
         </button>
+
+        <div id="login">
+          <a href="/auth/github"><img src="../assets/google_signin.png" alt="Google Login" /></a>
+        </div>
       </form>
     </div>
   );

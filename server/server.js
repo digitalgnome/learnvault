@@ -4,9 +4,21 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
+const cookieSession = require('cookie-session');
+const session = require('express-session');
+
+const passport = require('passport');
+const GitHubStategy = require('passport-github2').Strategy;
+
+let GITHUB_CLIENT_ID = '731d63091a4e63d6d4c0';
+let GITHUB_CLIENT_SECRET = '8b1e7a76b1ab23a9054267cde19de15ec7182d02';
+
 
 const userController = require('./controllers/user');
 const verifyToken = require('./utils/verifyToken');
+
+
+const keys = require('./keys/keys');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -19,6 +31,65 @@ const PORT = process.env.PORT || 5000;
 app.use(express.static(path.join(__dirname, '..', 'client', 'dist')));
 app.use(express.json({ extended: false }));
 app.use(cookieParser());
+
+//Passport setup
+
+passport.serializeUser(function (user, done) {
+  done(null, user);
+});
+
+passport.deserializeUser(function (obj, done) {
+  done(null, obj);
+});
+
+passport.use(
+  new GitHubStategy(
+    {
+      clientID: GITHUB_CLIENT_ID,
+      clientSecret: GITHUB_CLIENT_SECRET,
+      callbackURL: 'http://localhost:5000/auth/github/callback',
+    },
+    function (accessToken, refreshToken, profile, done) {
+      //
+      console.log("githubStrategy",profile );
+      /*
+      User.remove({ githubId: profile.id }, function (err, user) {
+        console.log('try to remove',err,user);
+      });
+      */  
+    }
+  )
+);
+
+app.use(session({ secret: 'keyboard cat', resave: false, saveUninitialized: false }));
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+app.get(
+  '/auth/github',
+  passport.authenticate('github', { scope: ['user:email'] }),
+  function (req, res) {
+    // The request will be redirected to GitHub for authentication, so this
+    // function will not be called.
+  }
+);
+
+// GET /auth/github/callback
+//   Use passport.authenticate() as route middleware to authenticate the
+//   request.  If authentication fails, the user will be redirected back to the
+//   login page.  Otherwise, the primary route function will be called,
+//   which, in this example, will redirect the user to the home page.
+app.get(
+  '/auth/github/callback',
+  passport.authenticate('github', { failureRedirect: '/login' }),
+  function (req, res) {
+    console.log('TESTING CALLBACK ROUTE');
+    res.redirect('/api/collections');
+  }
+);
+
+
 
 app.post('/api/register', userController.registerUser);
 app.post('/api/login', userController.loginUser);
@@ -40,6 +111,8 @@ app.get('*', (req, res) => {
 // Connect to DB
 // Then start server
 // -----------------
+
+console.log('MongoDB connection:', process.env.DB);
 
 mongoose.connect(process.env.DB, {
   useNewUrlParser: true,
