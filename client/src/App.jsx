@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Nav from './components/Nav';
@@ -16,6 +16,25 @@ import './App.css';
 
 const App = () => {
   const [loggedInUser, setLoggedInUser] = useState('');
+
+  useEffect(() => {
+    fetch('/api/user')
+      .then((res) => {
+        console.log("request for user info", res);
+        if (res.status === 200) {
+          setLoggedInUser(true);
+        } else {
+          const error = new Error(res.error);
+          throw error;
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        setLoggedInUser(false);
+      });
+  }, []);
+
+
 
   return (
     <Router>

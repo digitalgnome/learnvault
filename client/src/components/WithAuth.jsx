@@ -7,8 +7,9 @@ const WithAuth = ({ Component }) => {
   const [redirect, setRedirect] = useState(false);
 
   useEffect(() => {
-    fetch('/api/checkToken')
+    fetch('/api/user')
       .then((res) => {
+        console.log("request for user info", res);
         if (res.status === 200) {
           setLoading(false);
         } else {
