@@ -1,9 +1,11 @@
 import React from 'react';
 
-const Profile = () => (
-  <div className="profile">
-    This is the profile...
-  </div>
+const Profile = ({ name }) => (
+  <h1 className="profile">
+    Hello
+    {' '}
+    {name}
+  </h1>
 );
 
 export default Profile;
