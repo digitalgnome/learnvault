@@ -16,25 +16,26 @@ import './App.css';
 
 const App = () => {
   const [loggedInUser, setLoggedInUser] = useState('');
+  const [userId, setUserId] = useState('');
 
   useEffect(() => {
     fetch('/api/user')
       .then((res) => {
-        console.log("request for user info", res);
         if (res.status === 200) {
-          setLoggedInUser(true);
-        } else {
-          const error = new Error(res.error);
-          throw error;
+          return res.json();
         }
+        const error = new Error(res.error);
+        throw error;
+      })
+      .then((data) => {
+        setLoggedInUser(data.username);
+        setUserId(data._id);
       })
       .catch((err) => {
-        console.error(err);
-        setLoggedInUser(false);
+        // console.error('App.jsx useEffect error:', err);
+        setLoggedInUser('');
       });
   }, []);
-
-
 
   return (
     <Router>
@@ -51,7 +52,7 @@ const App = () => {
 
           <Route path="/profile">
             {/* To protect a route, simply wrap it with a WithAuth component */}
-            <WithAuth Component={Profile} />
+            <WithAuth loggedInUser={loggedInUser} Component={Profile} />
           </Route>
 
           <Route path="/collections/user/:userId">
@@ -63,7 +64,7 @@ const App = () => {
           </Route>
 
           <Route path="/savedcollections">
-            <SavedCollections loggedInUser={loggedInUser} />
+            <SavedCollections loggedInUser={loggedInUser} userId={userId} />
           </Route>
 
           <Route path="/" exact>

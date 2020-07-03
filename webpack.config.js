@@ -44,11 +44,4 @@ module.exports = {
       template: './src/index.html',
     }),
   ],
-
-  devServer: {
-    historyApiFallback: true,
-    proxy: {
-      '/api': 'http://localhost:5000',
-    },
-  },
 };

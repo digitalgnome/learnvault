@@ -2,14 +2,17 @@ import React, { useState, useEffect } from 'react';
 
 import Collection from './Collection';
 
-const SavedCollections = ({ loggedInUser }) => {
+const SavedCollections = ({ loggedInUser, userId }) => {
   const [collections, setCollections] = useState([]);
   const currentCollections = [];
-
+  if (!loggedInUser) {
+    window.history.back();
+  }
   useEffect(() => {
     // Get all collections for user
+    console.log('SavedCollections.jsx Line 11 loggedInUser =', loggedInUser);
 
-    fetch(`/api/collections/savedcollections/${loggedInUser}`, {
+    fetch('/api/collections/savedcollections', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
