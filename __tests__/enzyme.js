@@ -1,8 +1,8 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
 import {
   configure, shallow,
 } from 'enzyme';
+import React from "../client/node_modules/react/index"
 import Adapter from 'enzyme-adapter-react-16';
 // import toJson from 'enzyme-to-json';
 import { fetchCollection } from './fetch';
@@ -12,9 +12,9 @@ import { fetchCollection } from './fetch';
 import Profile from '../client/src/components/Profile';
 import AllCollections from '../client/src/components/collections/AllCollections';
 
-jest.mock('./Collection.css', () => ({}));
+// jest.mock('./Collection.css', () => ({}));
 
-global.fetch = fetchCollection;
+// global.fetch = fetchCollection;
 
 // Newer Enzyme versions require an adapter to a particular version of React
 configure({ adapter: new Adapter() });
@@ -23,12 +23,12 @@ describe('React unit tests', () => {
   describe('Profile', () => {
     let wrapper;
     const props = {
-      name: 'Charlie',
+      loggedInUser: 'Charlie@gmail.com',
     };
 
     beforeAll(() => {
       wrapper = shallow(<Profile {...props} />);
-    });
+      });
 
     it('Renders a <h1> tag with the name prop', () => {
       expect(wrapper.type()).toEqual('h1');
