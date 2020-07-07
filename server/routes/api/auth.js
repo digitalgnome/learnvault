@@ -24,9 +24,7 @@ router.get('/callback', (req, res, next) => {
     req.logIn(user, (err) => {
       if (err) { return next(err); }
       const { returnTo } = req.session;
-      console.log('In auth.js Line 27 returnTo =', returnTo);
       delete req.session.returnTo;
-      console.log('In auth.js Line 29 returnTo =', returnTo);
 
       res.redirect('/profile');
     });

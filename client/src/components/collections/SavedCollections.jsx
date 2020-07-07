@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Collection from './Collection';
 
 const SavedCollections = ({ loggedInUser, userId }) => {
+  console.log('SavedCollections.jsx Line 6 userId =', userId);
   const [collections, setCollections] = useState([]);
   const currentCollections = [];
   if (!loggedInUser) {
@@ -10,7 +11,7 @@ const SavedCollections = ({ loggedInUser, userId }) => {
   }
   useEffect(() => {
     // Get all collections for user
-    console.log('SavedCollections.jsx Line 11 loggedInUser =', loggedInUser);
+    console.log('SavedCollections.jsx Line 14 loggedInUser =', loggedInUser);
 
     fetch('/api/collections/savedcollections', {
       method: 'GET',
@@ -20,6 +21,7 @@ const SavedCollections = ({ loggedInUser, userId }) => {
     })
       .then((response) => response.json())
       .then((data) => {
+        console.log('SavedCollections.jsx Line 24 data =', data);
         if (data.length > 0) {
           data.map((id) => fetch(`/api/collections/${id}`)
             .then((res) => res.json())
